@@ -29,7 +29,7 @@ npm start
 ## Tech Stack
 
 - ReactJS
-- React-hooks-global-state
+- React Hooks + Context API
 - React Router
 - TailwindCSS
 - Axios
