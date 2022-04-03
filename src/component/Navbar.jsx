@@ -10,7 +10,7 @@ const Navbar = () => {
     >
       <nav className='flex gap-4 items-center'>
         <Link className='font-bold' to='/'>
-          BOOKU
+          Boobook💤
         </Link>
         <SearchBar />
         <Link to='/bookmarks'>

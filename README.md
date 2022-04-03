@@ -16,11 +16,7 @@ Install the package
 npm install
 ```
 
-Populate env
-- use .env.example as a reference
-- then insert API url to the key provided
-
-Run project (for client)
+Run project
 
 ```bash
 npm start
