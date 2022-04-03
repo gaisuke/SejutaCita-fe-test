@@ -29,7 +29,6 @@ npm start
 ## Tech Stack
 
 - ReactJS
-- React Hooks + Context API
+- Redux-toolkit
 - React Router
 - TailwindCSS
-- Axios

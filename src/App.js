@@ -1,21 +1,28 @@
-import * as React from "react";
-import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout/Layout";
-import Home from "./pages/Home/Home";
-import Detail from "./pages/Detail/Detail";
-import Bookmark from "./pages/Bookmark/Bookmark";
+import Bookmark from "./pages/Bookmark";
+import Category from "./pages/Category";
+import WithNav from "./component/WithNav";
+import WithoutNav from "./component/WithoutNav";
+import Home from "./pages/Home";
+import SingleBook from "./pages/SingleBook";
 
-export default function App() {
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/detail/:cat/:id" element={<Detail />} />
-          <Route path="/bookmark" element={<Bookmark />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className='pt-20 flex flex-col items-center h-full'>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<WithNav />}>
+            <Route path='/' element={<Home />} />
+          </Route>
+          <Route element={<WithoutNav />}>
+            <Route path='/books/:cat/:id' element={<SingleBook />} />
+            <Route path='/category/:cat' element={<Category />} />
+            <Route path='/bookmarks' element={<Bookmark />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
+
+export default App;
